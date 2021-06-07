@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Analyse this</title>
+    <link rel="text/css" href="/styles/resets.scss" />
+    <link rel="text/css" href="/styles/base.scss" />
+    <link rel="text/css" href="/styles/header.scss" />
+    <link rel="text/css" href="/styles/form.scss" />
+    <link rel="text/css" href="/styles/footer.scss" />
+  </head>
 
-    <body>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Analyse This</h1>
+        <h2 class="sub">Natural Language Interpreting</h2>
+      </header>
+      <main>
+        <section>
+          <h3 class="analysis">Insert URL to be analysed</h3>
+          <form class="" onsubmit="return handleSubmit(event)">
+            <input
+              class="analyseField"
+              id="name"
+              type="text"
+              name="input"
+              value=""
+              onblur="onBlur()"
+              placeholder="Article URL"
+            />
+            <input
+              class="analyseButton"
+              type="submit"
+              name=""
+              value="Analyse"
+              onclick="return handleSubmit(event)"
+              onsubmit="return handleSubmit(event)"
+            />
+          </form>
+        </section>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+        <section>
+          <h3 class="analysis">Analysis Results</h3>
+          <div id="results">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. In
+            hendrerit gravida rutrum quisque non. Non enim praesent elementum
+            facilisis leo vel fringilla est. Venenatis urna cursus eget nunc
+            scelerisque viverra. Et malesuada fames ac turpis egestas sed
+            tempus. Id aliquet risus feugiat in ante metus dictum at tempor. In
+            massa tempor nec feugiat nisl pretium fusce id velit.
+          </div>
+        </section>
+      </main>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
-
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
+      <footer><span class="copyleft">&copy;</span> Copyleft</footer>
+    </div>
+  </body>
 </html>
