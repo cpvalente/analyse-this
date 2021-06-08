@@ -10,16 +10,28 @@ body {
     font-family: $font-family;
 }
 
+main {
+    width: 100%;
+}
+
 section {
-    max-width: 26vw;
     margin-top: 3em;
     h3 {
         font-size: 1.2em;
+    }
+
+    #results {
+        li {
+            text-transform: capitalize;
+        }
     }
 }
 
 .container {
     padding-top: 10vh;
+    max-width: 40vw;
+    margin: 0 auto;
+
 
     display: flex;
     flex-direction: column;
