@@ -1,7 +1,7 @@
 function validateURL(url) {
   try {
     new URL(url);
-  } catch (e) {
+  } catch (_) {
     return false;
   }
   return true;

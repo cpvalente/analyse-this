@@ -39,4 +39,4 @@ async function handleSubmit(event) {
     .catch((error) => console.log(error));
 }
 
-export { handleSubmit };
+export { updateContent, handleSubmit };
