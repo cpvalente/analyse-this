@@ -8,6 +8,10 @@
     <link rel="text/css" href="/styles/header.scss" />
     <link rel="text/css" href="/styles/form.scss" />
     <link rel="text/css" href="/styles/footer.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -19,29 +23,23 @@
       <main>
         <section>
           <h3 class="analysis">Insert URL to be analysed</h3>
-          <form class="" onsubmit="return handleSubmit(event)">
+          <form class="" id="form">
             <input
               class="analyseField"
-              id="name"
+              id="url"
               type="text"
               name="input"
-              value=""
-              onblur="onBlur()"
+              value="http://www.theguardian.com/culture/2021/jun/07/which-superhero-has-the-best-costume"
               placeholder="Article URL"
             />
-            <input
-              class="analyseButton"
-              type="submit"
-              name=""
-              value="Analyse"
-              onclick="return handleSubmit(event)"
-              onsubmit="return handleSubmit(event)"
-            />
+            <button class="analyseButton" type="submit" name="" value="Analyse">
+              <i class="fa fa-question" aria-hidden="true"></i>
+            </button>
           </form>
         </section>
 
         <section>
-          <h3 class="analysis">Analysis Results</h3>
+          <h3 id="resultsTitle" class="analysis hidden">Analysis Results</h3>
           <div id="results">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. In
