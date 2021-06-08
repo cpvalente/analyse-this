@@ -1,4 +1,4 @@
-import { handleSubmit } from './js/formHandler';
+import { handleSubmit } from './js/pageHandler';
 import { validateURL } from './js/URLUtils';
 import './styles/base.scss';
 import './styles/footer.scss';
