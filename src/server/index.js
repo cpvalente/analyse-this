@@ -30,7 +30,9 @@ app.get('/test', (req, res) => {
 
 // Implement analysis route
 app.post('/analyseURL', async function (req, res) {
-  if (req.body?.url == null) {
+  const url = req.body.url;
+
+  if (url == null) {
     res
       .status(400)
       .send('No URL data in request body or badly formatted request');
@@ -38,8 +40,7 @@ app.post('/analyseURL', async function (req, res) {
   }
 
   // build URL
-  const BASE_URL = `https://api.meaningcloud.com/sentiment-2.1?key=${process.env.API_KEY}&lang=en&url=${req.body.url}`;
-  console.log(BASE_URL);
+  const BASE_URL = `https://api.meaningcloud.com/sentiment-2.1?key=${process.env.API_KEY}&lang=en&url=${url}`;
 
   fetch(BASE_URL)
     .then((response) => response.json())
